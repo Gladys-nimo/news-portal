@@ -1,4 +1,4 @@
 package dao;
 
-public interface newsDao {
+public interface NewsDao {
 }
