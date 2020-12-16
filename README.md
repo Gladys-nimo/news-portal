@@ -1,6 +1,6 @@
-##Organisational news portal
+# Organisational news portal
 This is a REST API for querying and rterieveing scoped news and information. There should be news/posts that are available to all employess without navgting into any department, and others that are housed within the department.
-#Author
+# Author
 Gladys Kanyora
 ## Setup instruction
 1 {Fork this repo}
