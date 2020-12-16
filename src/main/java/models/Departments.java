@@ -5,13 +5,13 @@ import java.util.Objects;
 public class Departments {
     private String name;
     private String description;
-    private int numOfEmployee;
+    private int size;
     private int id;
 
-    public Departments(String name, String description, int numOfEmployee) {
+    public Departments(String name, String description) {
         this.name = name;
         this.description = description;
-        this.numOfEmployee = numOfEmployee;
+        this.size = 0;
     }
 
     public String getName() {
@@ -30,19 +30,21 @@ public class Departments {
         this.description = description;
     }
 
-    public int getNumOfEmployee() {
-        return numOfEmployee;
+    public int getSize() {
+        return size;
     }
 
-    public void setNumOfEmployee(int numOfEmployee) {
-        this.numOfEmployee = numOfEmployee;
+    public void setSize(int size) {
+        this.size = size;
     }
+
 
     public int getId() {
         return id;
     }
 
     public void setId(int id) {
+
         this.id = id;
     }
 
@@ -51,7 +53,7 @@ public class Departments {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Departments that = (Departments) o;
-        return numOfEmployee == that.numOfEmployee &&
+        return size == that.size &&
                 id == that.id &&
                 Objects.equals(name, that.name) &&
                 Objects.equals(description, that.description);
@@ -59,6 +61,6 @@ public class Departments {
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, description, numOfEmployee, id);
+        return Objects.hash(name, description, size, id);
     }
 }

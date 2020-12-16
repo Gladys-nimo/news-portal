@@ -3,39 +3,40 @@ package models;
 import java.util.Objects;
 
 public class Users {
-    private String title;
-    private String content;
-    private String userid;
+    private String name;
+    private String position;
+    private String role;
     private int id;
 
-    public Users(String title, String content, String userid) {
-        this.title = title;
-        this.content = content;
-        this.userid =userid;
+    public Users(String name, String position, String role) {
+        this.name = name;
+        this.position = position;
+        this.role = role;
+
     }
 
-    public String getTitle() {
-        return title;
+    public String getName() {
+        return name;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getContent() {
-        return content;
+    public String getPosition() {
+        return position;
     }
 
-    public void setContent(String content) {
-        this.content = content;
+    public void setPosition(String position) {
+        this.position = position;
     }
 
-    public String getUserid() {
-        return userid;
+    public String getRole() {
+        return role;
     }
 
-    public void setUserid(String userid) {
-        this.userid = userid;
+    public void setRole(String role) {
+        this.role = role;
     }
 
     public int getId() {
@@ -52,13 +53,13 @@ public class Users {
         if (o == null || getClass() != o.getClass()) return false;
         Users users = (Users) o;
         return id == users.id &&
-                Objects.equals(title, users.title) &&
-                Objects.equals(content, users.content) &&
-                Objects.equals(userid, users.userid);
+                Objects.equals(name, users.name) &&
+                Objects.equals(position, users.position) &&
+                Objects.equals(role, users.role);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(title, content, userid, id);
+        return Objects.hash(name, position, role, id);
     }
 }
